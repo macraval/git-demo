@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="script/angular.min.js"></script>
+	<script type="text/javascript" src="firstController.js"></script>
+</head>
+<body ng-app="myModule">
+<div ng-controller="secondController">
+<table border=1>
+	<thead> 
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Gender</th>
+		<th>Salary</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="employee in employees"> 
+	<td>{{employee.firstName | uppercase}}</td>
+	<td>{{employee.lastName | lowercase}}</td>
+	<td>{{employee.gender}}</td>
+	<td>{{employee.salary|currency }}</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>
